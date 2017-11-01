@@ -1,0 +1,125 @@
+/* Stylesheet */
+
+* { padding: 0; margin: 0; } /* ausschalten vordefinierter padding und margin */
+html { overflow-y: scroll;
+margin-top: 0} /* Bildlaufleiste immer anzeigen */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+} /* Darstellung neuer HTML5-Elemente als Blockbox auch in alten Browser */
+
+/* Farben als Variablen definieren */
+:root {
+    --color-freshgreen: #79b41e;
+    --color-darkgreen: #005641;
+    --color-black: #0D0A0B;
+    --color-backgroundgreen: #DBE4C0
+}
+
+/* Gestalte body */
+body {
+    background-color: white; /* Hintergrundfarbe */
+    color: black; /* Schriftfarbe */
+    font-family: 'Open Sans', sans-serif;
+    margin-top: -40px /* weißen Balken über dem Header verschwinden lassen */
+}
+
+/* Gestalte wrapper */
+#wrapper{
+    background-color: var(--color-backgroundgreen);/* Hintergrundfarbe definieren */
+    
+}
+/* Gestalte header */
+#kopfbereich {
+    background-color: var(--color-backgroundgreen);
+    background-image: url(../img/headerbackground.jpg); /* Hintergrundbild für den header */
+    background-size: auto auto;
+    color: var(--color-darkgreen);
+    height: 360px;
+}
+
+
+    
+/* Gestalte nav */
+#navibereich {
+    font-family: 'Neucha', 'Open Sans', sans-serif;
+    color: var(--color-darkgreen);
+    background-color: white;
+    margin: auto;
+    padding: 20px 0px 20px
+    }
+/* Gestalten der Menüleiste mit hilfe von CSS-Klassen */
+ul.navmain li{
+    display: inline; /* -> Elemente in einer Zeile */
+    list-style-type: none; /* kein Aufzählungszeichen */
+    border: 1px solid white;
+    padding: 0.5em; /* Abstand zwischen den Elementen */
+    font-size:130%;
+
+}
+
+ul.navmain { margin: 0; /* Margin auto deaktivieren */
+    background-color: white; /* weißer Hintergrund in der Menüsleiste */
+}
+/* Schriftfarbe der Links im Menü -> Schwarz */
+ul.navmain a {color: Black;}
+/* Schriftfarbe wird grün, wenn der Mauszeiger sich auf den Punkten befindet oder diese mit TAB ausgewählt wurden */
+ul.navmain a:hover, ul.navmain a:focus {
+    color: var(--color-freshgreen);
+}
+
+/* Gestalte main */
+#inhaltsbereich {
+    margin: 10px;
+    
+}
+
+/* Gestalte footer */
+#fussbereich {
+    padding-top: 10px;
+    border-top: 1px solid black;
+    padding-bottom: 50px
+}
+#inhaltsbereich, #fussbereich {
+    margin: auto;
+    width: 90%;
+} /* Inhalt und fussbereich ein bisschen weniger Breit als der Rest und zentriert */
+
+/* Gestalten der Kontakt Adresse */
+address {
+    text-align: center; /* zentrieren */
+    font-size: 85%; /* kleiner als der Rest */
+    font-family: normal; /* nicht kursiv */
+    letter-spacing: 1.5px; /* abstand zwischen Buchstaben */
+    line-height: 1.5 /* Zeilenabstand */
+}
+
+/* Links nicht unterstreichen */
+a {
+    text-decoration: none;
+} 
+
+/* Links in main und Address doch unterstreichen */
+main a,
+address a {
+    text-decoration: underline
+}
+/* Links sind nicht mehr , wenn der Mauszeiger sich auf den Punkten befindet oder diese mit TAB ausgewählt wurden */
+a:hover,
+a:focus {
+    text-decoration: none
+}
+
+
+/* Wiedrherstellung der Abstände wegen Reset */
+h2, p, ul, ol, blockquote { margin-bottom: 1em; }
+
+/* Abstand von Links */
+ul, ol { margin-left: 2em; }
+/* verschachtelte Listen ohne Abstand */
+ul ul, ul ol, ol ol, ol ul { margin-bottom: 0; }
+h1 { font-size: 250%;
+    margin: 1em;
+    margin-left:0;
+    font-family: 'Neucha', 'Open Sans', sans-serif;
+    color: var(--color-darkgreen);
+}
