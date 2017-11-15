@@ -2,7 +2,7 @@
 <html lang="de">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Ökullus - Ihre Ökokiste in Münster</title>
     <meta name="description" content="ökullus - die biofrische grüne Kiste">
     <link href="css/style.css" rel="stylesheet" media="screen" type="text/css">
@@ -12,53 +12,53 @@
     
     <style>
 @import url('https://fonts.googleapis.com/css?family=Neucha');
-h1 { font-size: 250%;
-    margin: 1em;
-    margin-left:0;
-}
+
 </style> 
 </head>
 
 <body> <!-- der Body erscheint im Browser-->
 <div id="wrapper"> <!-- Wrapper als "Schutzumschlag"-->
-
-<header id="kopfbereich">
-    <h1>
-        <a href="index.html">
-            <img src="img/logo.gif"
-            class="logo"
-            alt="Ökullus.de - die biofrische grüne Kiste"
-            width="222"
-            title="Startseite"
-            style="border: 1px solid white; border-radius: 0 0 8px 8px; margin-left: 10px">
-            </a>
-            </h1>
-    
-    
+<header> 
+    <img src="img/headerbackground.jpg" style="width: 100%" class="img-fluid">
+        <a href="index.html"><img src=img/logo.gif alt="Logo Ökullus" title="Startseite" class="logo img-fluid"</a>
 </header>
-<div class="navmain">
-<nav id="navibereich">
-  <ul class="navmain">
-      <li><a href="index.html">Startseite</a></li>
-      <li><a href="sogehts.html">So geht's</a></li>
-      <li><a href="login.html">Log-In</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-  </ul>  
-
-</nav>
-    
-    
+<div id="navbereich" class="container-fluid">
+<nav class="navbar navbar-expand-sm">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Startseite</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">So geht's</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="sogehts.html">So bestellen Sie</a>
+        <a class="dropdown-item" href="lieferung.html">Wo liefern wir hin?</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="login.html">Log-In</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" href="register.html">Register</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="kontakt.html">Kontakt</a>
+    </li>
+  </ul>
+  </nav>
+</div>
 <main id="inhaltsbereich">
     <h1 Style="font-family: 'Neucha', 'Open Sans', sans-serif;color: var(--color-darkgreen)">Willkommen bei Ökullus</h1>
     
-    <h4>Ob wir auch zu Ihnen liefern entnehmen Sie bitte der Abbildung:</h4>
-
     <br>
-            <img src="img/liefergebiet.jpg" alt="Liefergebiet Ökullus" title="Liefergebiet Ökullus" width="100%" style="border: 3px solid var(--color-darkgreen); border-radius: 8px;">
-            
-        
-            <div>Kostenlose Lieferung ab 28€ Bestellwert</div>
-            <p>Wir freuen uns auf Sie!</p>
+    <h5>Schritt 1: Klicken Sie auf <span> <a href="register.html">Register</a> </span>
+    <h5>Schritt 2: Erstellen Sie einen persönlichen Account</h5>
+    <h5>Schritt 3: Klicken Sie auf der Bestätigungslink den wir Ihnen per Mail zusenden</h5>
+    <h5>Schritt 4: Los geht's! Nun können Sie aus dem Sortiment verschiedene Abokisten auswählen!</h5>
+    <br>
+    
+            <div><h5>Kostenlose Lieferung ab 28€ Bestellwert</h5></div>
+            <div><h5>Wir freuen uns auf Sie!</h5></div>
+            <p></p>
 </main>    
     
     
