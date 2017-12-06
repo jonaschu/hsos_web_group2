@@ -2,148 +2,227 @@
 <html lang="de">
 
 <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ökullus - Ihre Ökokiste in Münster</title>
-    <meta name="description" content="ökullus - die biofrische grüne Kiste">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ökullus - Ihre Ökokiste in Münster</title>
+  <meta name="description" content="ökullus - die biofrische grüne Kiste">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet" media="screen" type="text/css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link href="css/style.css" rel="stylesheet" media="screen" type="text/css">
 
-    <style>
+  <style>
     @import url('https://fonts.googleapis.com/css?family=Neucha');
-    
-    </style> <!-- Schriftart über google importieren -->
+  </style>
+  <!-- Schriftart über google importieren -->
 </head>
 
-<body> <!-- der Body erscheint im Browser-->
-<div id="wrapper"> <!-- Wrapper als "Schutzumschlag"-->
+<body>
+  <!-- der Body erscheint im Browser-->
+  <div id="wrapper">
+    <!-- Wrapper als "Schutzumschlag"-->
 
-<header> 
-    <img src="img/headerbackground.jpg" class="img-fluid" style="width: 100%">
-        <a href="index.html"><img src=img/logo.gif alt="Logo Ökullus" title="Startseite" class="logo img-fluid"</a>
-</header>
-<div id="navbereich" class="container-fluid">
-<nav class="navbar navbar-expand-sm">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="index.html">Startseite</a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">So geht's</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="sogehts.html">So bestellen Sie</a>
-        <a class="dropdown-item" href="lieferung.html">Wo liefern wir hin?</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="login.html">Log-In</a>
-    </li>
-    </li>
-     <li class="nav-item">
-      <a class="nav-link" href="register.html">Register</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="kontakt.html">Kontakt</a>
-    </li>
-  </ul>
-  </nav>
-</div>
-<main id="inhaltsbereich"> <!-- CSS-ID zur eindeutigen Kennung -->
-<div class="container-fluid"> <!-- Größe passt sich dem Bildschirm an -->
+    <header>
+      <img src="img/headerbackground.jpg" class="img-fluid" style="width: 100%">
+      <a href="index.html" class="logolink"><img src=img/logo.gif alt="Logo Ökullus" title="Startseite" class="logo img-fluid"</a>
+    </header>
+    <div id="navbereich" class="container-fluid sticky-top">
+      <nav class="navbar flex-column flex-md-row">
+        <ul class="nav flex-column flex-md-row">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Startseite</a>
+          </li>
 
-<div class="jumbotron">
-  <blockquote class="blockquote"> <!-- Zitat einbauen -->
-    <p>Wir müssen Landwirtschaft so betreiben und uns so ernähren, dass wir weder die Produktionsgrundlagen der Menschen im Süden noch die künftiger Generationen zerstören.</p>
-    <footer class="blockquote-footer">Felix Prinz zu Löwenstein, Vorsitzender des Bund Ökologische Lebensmittelwirtschaft (BÖLW)</footer>
-  </blockquote>
-</div>
-    <div class="row">
-        <div id="textbereich" class="col-sm-11">Wir setzen auf Regionalität und Frische unserer Bio-Produkte! Die Gemüsekiste aus Münster/Handorf bietet Ihnen ein breites Sortiment an hochwertigen und gesunden Bio-Produkten aus der Region, wie z.B. Kokosnüsse oder fruchtige Papaya.
-Wir arbeiten vornehmlich mit regionalen Bioland-Gärtnereien, -Landwirten und -Obstbauern zusammen. Unser wirtschaftliches Handeln wird geleitet vom Gedanken der ökologischen Nachhaltigkeit. Wir bieten auf ihre Bedürfnisse abgestimmt, verschieden zusammengestellte Gemüsekisten an. Überzeugen Sie sich selbst! </div>
-        <div class="col-sm-1"></div>
-    </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sortiment.html">Sortiment</a>
+          </li>
 
-<div class="container-fluid">
-  <div class="row"> 
-    <div class="col-sm-3"><h2>Unsere Sortimente</h2></div>
-    <div class="col-sm-9"> </div>
-  </div> <!-- Überschrift mit für unsere Produkte -->
-</div>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">So geht's</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="sogehts.html">So bestellen Sie</a>
+              <a class="dropdown-item" href="lieferung.html">Wo liefern wir hin?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+          </li>
+        </ul>
 
-<div class="row" id="productList">
-   <!-- hier werden die Produkte per Script aus der firebase database geladen -->
-</div>
-    
-    
-</div>
-</main>
+        <ul class="nav flex-column flex-md-row" id="myprofile" hidden>
+          <ul class="nav flex-column flex-md-row">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">Mein Profil</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="profilpage.html">Mein Profil</a>
+                <div class="dropdown-divider"></div>
+                <div><button id="btnlogout" class="btn btn-primary btn-block" type="submit" onclick="logout()">Abmelden</button></div>
+              </div>
+            </li>
 
-<footer id="fussbereich">
-    <!-- Kontakt Adresse im Fußbereich mit direktem Link zur Email -->
-    <address>
+          </ul>
+        </ul>
+
+        <ul class="nav flex-column flex-md-row" id="logister" hidden>
+          <ul class="nav flex-column flex-md-row">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">Anmelden/Registrieren</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="login.html">Anmelden</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="register.html">Registrieren</a>
+              </div>
+            </li>
+
+          </ul>
+
+        </ul>
+
+      </nav>
+      </div>
+
+      <main id="inhaltsbereich">
+        <!-- CSS-ID zur eindeutigen Kennung -->
+        <div class="container-fluid">
+          <!-- Größe passt sich dem Bildschirm an -->
+
+          <div class="jumbotron">
+            <blockquote class="blockquote">
+              <!-- Zitat einbauen -->
+              <p>Wir müssen Landwirtschaft so betreiben und uns so ernähren, dass wir weder die Produktionsgrundlagen der Menschen im Süden noch die künftiger Generationen zerstören.</p>
+              <footer class="blockquote-footer">Felix Prinz zu Löwenstein, Vorsitzender des Bund Ökologische Lebensmittelwirtschaft (BÖLW)</footer>
+            </blockquote>
+          </div>
+          <div class="row">
+            <div id="textbereich" class="col-sm-11">Wir setzen auf Regionalität und Frische unserer Bio-Produkte! Die Gemüsekiste aus Münster/Handorf bietet Ihnen ein breites Sortiment an hochwertigen und gesunden Bio-Produkten aus der Region, wie z.B. Kokosnüsse oder fruchtige Papaya. Wir
+              arbeiten vornehmlich mit regionalen Bioland-Gärtnereien, -Landwirten und -Obstbauern zusammen. Unser wirtschaftliches Handeln wird geleitet vom Gedanken der ökologischen Nachhaltigkeit. Wir bieten auf ihre Bedürfnisse abgestimmt, verschieden
+              zusammengestellte Gemüsekisten an. Überzeugen Sie sich selbst! </div>
+            <div class="col-sm-1"></div>
+          </div>
+
+
+          <div class="jumbotron">
+            <blockquote class="blockquote">
+              <!-- Zitat einbauen -->
+              <p>Ökullus bekommt einen neuen Webauftritt. Mit der stark verbesserten Internetseite erwarten wir einen Bestellungszuwachs von 300 % in den nächsten 10 Tagen. Unsere Arbeitsflächenkapazität wurde bereits verdoppelt. Wir werden nun Stück für
+                Stück alle Landwirte im Umkreis Münster aufkaufen! Macht euch gefasst! Peace out! Mic drop</p>
+              <footer class="blockquote-footer">Jonathan Schulze Buschhoff (Mitglied der Gruppierung Pentagonhacker) zur BILD am 22.11.2017</footer>
+            </blockquote>
+          </div>
+
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-sm-6 abstandbottom">
+                <div class="card">
+                  <div class="card-header">Bio Bio Bio</div>
+                  <div class="card-body"><img src="img/buschhoff.jpg" class="img-fluid" alt="Gemüsekiste groß"></div>
+                  <div class="card-footer"><span id="price"><strong>Bio boomt bei den Buschhoffs</strong></span><br>Mit ihren Biokisten versorgt die Familie Schulze Buschhoff ca. 2500 Haushalte in Münster. Die Kunden schätzen vor allem die gute Qualität und die ansprechende Zusammenstellung
+                    der Kisten.<br> Petra K. aus Handorf bestellt seit 45 Jahren bei Ökullus: "Bei den Buschhoffs bestelle ich schon mein Leben lang. Meine Eltern und meine Großeltern haben auch schon online Abokisten dort bestellt. Alle sind älter als
+                    90 Jahre geworden.Ich bin mir sicher, dass das Geheimnis dieser langen Lebensdauer mit der Ernährung vom Biogemüse der Schulze Buschhoffs zusammenhängt. Mein Vater hat drei Schachteln Fluppen am Tag vernichtet. Alles kein Problem wenn
+                    man sich vernünftig ernährt!</div>
+                </div>
+              </div>
+              <div class="col-sm-6 abstandbottom">
+                <div class="card">
+                  <div class="card-header">Bahntrasse für Abokisten ist im Bau!</div>
+                  <div class="card-body"><img src="img/buschhoffkauftmünster.jpg" class="img-fluid" alt="Gemüsekiste groß"></div>
+                  <div class="card-footer"><strong>Schulze Buschhoff expandieren!</strong></span><br> Die Gerüchte sind bestätigt. Der Kaufvertrag in der Hand ist unterzeichnet. Nunmehr zwei weitere Betriebe wurden von der Familie Schulze Buschhoff gekauft. Jörg Schulze Buschhoff
+                    zum Deal: "Die anderen fahren immer nur den gleichen konventionellen Schuh. Die können mit uns einfach nicht mithalten. Bio setzt sich am Ende des Tages eben einfach durch. Das hab ich schon immer gesagt! Die perfekte Abrundung für
+                    den Produktionsstandort in Münster ist nun die eigene Bahntrasse die demnächst für den Transport der Abokisten nach ganz Deutschland genutzt wird." </div>
+                </div>
+              </div>
+              <div class="col-sm-6 abstandbottom">
+                <div class="card">
+                  <div class="card-header">Rote Karte für den konventionellen Anbau!</div>
+                  <div class="card-body"><img src="img/schiri.jpg" class="img-fluid" alt="Gemüsekiste groß"></div>
+                  <div class="card-footer"><strong>Schulze Buschhoffs machen Schluss mit Lustig</strong></span><br> Nach jahrelanger Einbahnstraße ist nun Ende im Gelände. Jörg und Victoria Schulze Buschhoff zeigen dem konventionellen Anbau die rote Karte. "Wir haben die Nase
+                    voll. Wenn ich nur daran denke könnte ich mir die Augen aus dem Kopf weinen. Es ist zum Haareraufen. Die Anzahl der Biobetriebe konnte man vor 10 Jahren noch an der Hand abzählen. Wir machen Schluss damit. Mit unserem zertifizierten
+                    Biogemüse wird alles besser. Trust me I'm an engineer!"</div>
+                </div>
+              </div>
+              <div class="col-sm-6 abstandbottom">
+                <div class="card">
+                  <div class="card-header">Buschhoff kündigt großzügiges Sponsoring an!</div>
+                  <div class="card-body"><img src="img/regungslos.jpg" class="img-fluid" alt="Gemüsekiste groß"></div>
+                  <div class="card-footer"><strong>Marketing Supreme!<br>Jahn regungslos erhält 5 Jahres Sponsoring Vertrag!</strong><br>Mit dieser neuen Marketingstrategie will Ökullus den Absatz in die Höhe treiben. Gründer, CFO und Ceo des aufstebenden Unternehmens Jörg Schulze
+                    Buschhoff zum Deal: "Dieses Team passt einfach perfekt zu unserem Unternehmen. Der absolute Wille das Runde ins Eckige zu bringen vereint uns nachhaltig. Bei den Jungs muss die Flasche in den Kasten und bei uns der Kohl in die Kiste.
+                    Ich sehe meinen jährlichen Zuschuss von 500 € für die Mannschaft als gute Geldanlage. Viele der Jungs sind künftige Kundschaft in meinem Geschäft. Außerdem spielen sie extrem attraktiven Fußball. Das macht weitere Zuschauer auf uns
+                    aufmerksam. </div>
+                </div>
+              </div>
+
+            </div>
+
+      </main>
+
+      <footer id="fussbereich">
+        <!-- Kontakt Adresse im Fußbereich mit direktem Link zur Email -->
+        <address>
     E-mail: <a href="mailto:shop@oekullus.de"> shop@oekullus.de</a> &bull; J. Schulze Buschhoff &bull;
     <br> Am Handorfer Bahnhof 2 &bull; 48157 Münster
     </address>
 
-    <a href="#wrapper">Nach Oben</a> <!-- Buttom um zum Anfang der Website zu gelangen -->
+        <a href="#wrapper">Nach Oben</a>
+        <!-- Buttom um zum Anfang der Website zu gelangen -->
 
 
-</footer>
-</div> <!-- navmain Ende -->
-</div>    <!-- wrapper Ende -->
+      </footer>
+      </div>
+      <!-- navmain Ende -->
+      </div>
+      <!-- wrapper Ende -->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    
-    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-database.js"></script>
-<script> // script start
-  // Initialize Firebase
-  // TODO: Replace with your project's customized code snippet
-  var config = {
-    apiKey: "<AIzaSyBMnGNfF6KwlwLXB0VJyqMxmXfVzTw0QEA>",
-    databaseURL: "https://oekullus.firebaseio.com/"
-  };
-  firebase.initializeApp(config); 
-  // Zugriff auf die Firebase database
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
+      <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+      <script>
+        /* global firebase*/
+        var config = {
+          apiKey: "AIzaSyBMnGNfF6KwlwLXB0VJyqMxmXfVzTw0QEA",
+          databaseURL: "https://oekullus.firebaseio.com/",
+          authDomain: "oekullus.firebaseapp.com"
+        };
+        firebase.initializeApp(config);
+        // Zugriff auf die Firebase database
+        firebase.auth().onAuthStateChanged(loginChanged);
 
- // Get a reference to the database's welcome text
-        var productsRef = firebase.database().ref('products');
-
-        // Änderungen werden direkt ohne refresh Sichtbar
-        productsRef.on('value', refreshProdcutList);
-
-
-        // Funktion die die Produktliste auf das setzt, was von der Database ausgelesen wird.
-        function refreshProdcutList(value) {
-            var products = value.val();
-
-            // diese var gibt an, wo im bestehenden html-doc die Produkte eingetragen werden sollen
-            var listContainer = document.querySelector("#productList");
-            listContainer.innerHTML = "";
-
-            // Loop über jedes Produkt, wobei je eine Bootstrap Card erstellt wird, in dem die Produktinformation Name, Preis, Bild, Inhalt untergebracht sind
-            products.forEach(
-                function(product) {
-                    // Create a new div element using JavaScript
-                    var newDiv = document.createElement('div');
-                    // Add the bootstrap class and our own product class
-                    newDiv.className += "col-lg-3 test";
-                    // Add the name, description and price to the div
-                    newDiv.innerHTML = '<div class="card"><div class="card-header">' + product.name + '</div><div class="card-body"><img src="'+ product.img + '" class="img-fluid"</div><div class="card-footer"><p><strong>' + product.preis + '</strong></p><p>' + product.description + '</p><a href="#" class="btn btn-primary">Bestellen</a></div></div>';
-                    // Add the div to the parent container
-                    listContainer.appendChild(newDiv);
-                });
-
+        function handleError(err) {
+          console.error(err.message);
         }
 
-</script> <!-- script Ende -->
+
+        function loginChanged(user) {
+          if (user) {
+            console.log("User with email >" + user.email + "< is signed in.");
+            document.getElementById("btnlogout").removeAttribute("disabled");
+            // Show the meinProfilbutton
+            document.getElementById("myprofile").removeAttribute("hidden");
+            //Hide the Anmelden/Registrieren button
+            document.getElementById("logister").setAttribute("hidden", "true");
+          }
+          else {
+            console.log("no User is Logged in");
+            document.getElementById("btnlogout").setAttribute("disabled", true);
+            //Hide the meinProfil button
+            document.getElementById("myprofile").setAttribute("hidden", "true");
+            // Show the Anmelden/Registrieren button
+            document.getElementById("logister").removeAttribute("hidden");
+          }
+        }
+
+        function logout() {
+          firebase.auth().signOut().then(function() {
+            console.log("User successfully signed out.");
+            window.location.replace("logout.html");
+          }).catch(handleError);
+        }
+      </script>
 
 
 
 
 </body>
-
-

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ökullus - Ihre Ökokiste in Münster</title>
+  <meta name="description" content="ökullus - die biofrische grüne Kiste">
+
+  <!-- verlinkung der Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <!-- eigene CSS-verlinkung -->
+  <link href="css/style.css" rel="stylesheet" media="screen" type="text/css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Neucha');
+  </style>
+  <!-- Schriftart über google importieren -->
+</head>
+
+<body>
+  <!-- der Body erscheint im Browser-->
+  <div id="wrapper">
+    <!-- Wrapper als "Schutzumschlag"-->
+    <header>
+      <img src="img/headerbackground.jpg" class="img-fluid" style="width: 100%">
+      <a href="index.html" class="logolink"><img src=img/logo.gif alt="Logo Ökullus" title="Startseite" class="logo img-fluid"</a>
+    </header>
+ <div id="navbereich" class="container-fluid sticky-top">
+      <nav class="navbar flex-column flex-md-row">
+        <ul class="nav flex-column flex-md-row">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Startseite</a>
+          </li>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sortiment.html">Sortiment</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">So geht's</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="sogehts.html">So bestellen Sie</a>
+              <a class="dropdown-item" href="lieferung.html">Wo liefern wir hin?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+          </li>
+        </ul>
+
+        <ul class="nav flex-column flex-md-row" id="myprofile" hidden>
+          <ul class="nav flex-column flex-md-row">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">Mein Profil</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="profilpage.html">Mein Profil</a>
+                <div class="dropdown-divider"></div>
+                <div><button id="btnlogout" class="btn btn-primary btn-block" type="submit" onclick="logout()">Abmelden</button></div>
+              </div>
+            </li>
+
+          </ul>
+        </ul>
+
+        <ul class="nav flex-column flex-md-row" id="logister" hidden>
+          <ul class="nav flex-column flex-md-row">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">Anmelden/Registrieren</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="login.html">Anmelden</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="register.html">Registrieren</a>
+              </div>
+            </li>
+
+          </ul>
+
+        </ul>
+
+      </nav>
+      </div>
+
+
+      <main id="inhaltsbereich">
+        <!-- CSS-ID zur eindeutigen Kennung -->
+      
+      <div class="container">
+
+        <div class="row align-items-center" id="notloggedin">
+            <div class="col-sm-3"></div>
+            <div class="col align-self-center">
+                <h3 class="text-center">Bitte melden Sie sich zuerst an!</h3>
+                <hr>
+                
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+
+        <div class="row align-items-center" id="updateProfileForm" hidden>
+            <div class="col-sm-2"></div>
+            <div class="col align-self-center">
+                <h3 class="text-center">Bringen Sie Ihr Profil auf den neusten Stand</h3>
+                <hr>
+                <div class="form-group">
+                    <label for="inputDisplayName">Legen Sie einen Benutzernamen an</label>
+                    <input type="text" class="form-control" id="inputDisplayName" placeholder="Display Name">
+                </div>
+                <div class="form-group">
+                    <label for="inputPhotoUrl">Fügen Sie ein Profilfoto hinzu! <br><em>(Verwenden Sie hierzu eine URL zu einem Foto zu Ihnen)</em></label>
+                    <input type="text" class="form-control" id="inputPhotoUrl" placeholder="Photo URL">
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">Neue Emailadresse</label>
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Neue Emailadresse">
+                </div>
+                <div class="form-group">
+                  <label for="inputLiefergebiet">Neues Liefergebiet</label>
+                  <select class="form-control" id="inputLiefergebiet">
+                    <option> --Bitte wählen Sie ein Liefergebiet--</option>
+                    <option value="Nord">Nord</option>
+                    <option value="Sued">Süd</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                    <label for="inputStrasse">Neue Strasse</label>
+                    <input type="text" class="form-control" id="inputStrasse" placeholder="Neue Strasse">
+                </div>
+                <div class="form-group">
+                    <label for="inputPLZ">Neue Postleitzahl</label>
+                    <input type="text" class="form-control" id="inputPLZ" placeholder="Neue Postleitzahl">
+                </div>
+                <div class="form-group">
+                    <label for="inputStadt">Neue Stadt</label>
+                    <input type="text" class="form-control" id="inputStadt" placeholder="Neue Stadt">
+                </div>
+                <div class="form-group">
+                    <label for="inputHandynummer">Neue Handynummer</label>
+                    <input type="text" class="form-control" id="inputHandynummer" placeholder="Neue Handynummer">
+                </div>
+
+                <!-- When this is clicked, updateProfile() is called -->
+                <button id="btnUpdateProfile" onclick="updateProfile(); updateExProfile()" class="btn btn-primary">Update Profile</button>
+
+
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+    </div>
+    <!-- End of container -->
+   
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content, als Bestätigung für eine erfolgreiches Profilupdate -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id="profileupdated">Ihr Profil ist nun auf dem neusten Stand</h4>
+          <!--<h4 class="modal-title" hidden="" id="profilenotupdated">Es gabe ein Problem</h4>--> <!-- Anzeigen der Überschrift falls permission denied -->
+        </div>
+        <div class="modal-body" id="profileupdated1">
+         <p>Sehen Sie Ihre Änderungen unter <a href="profilpage.html" >Mein Profil</a></p>
+        </div>
+        <!-- <div class="modal-body" style="color: red" id="profilenotupdated1" hidden="">
+          <!-- Anzeigen der Fehlermeldung falls permission denied -->
+        <!--</div> -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+      </main>
+
+
+      <footer id="fussbereich">
+       
+        <!-- Kontakt Adresse im Fußbereich mit direktem Link zur Email -->
+        <address>
+    E-mail: <a href="mailto:shop@oekullus.de"> shop@oekullus.de</a> &bull; J. Schulze Buschhoff &bull;
+    <br> Am Handorfer Bahnhof 2 &bull; 48157 Münster
+    </address>
+
+        <a href="#wrapper">Nach Oben</a>
+        <!-- Buttom um zum Anfang der Website zu gelangen -->
+
+
+      </footer>
+    </div>
+    <!-- navmain Ende -->
+  </div>
+  <!-- wrapper Ende -->
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+<script> 
+  /* global firebase*/
+  /* global $*/
+    var config = {
+      apiKey: "AIzaSyBMnGNfF6KwlwLXB0VJyqMxmXfVzTw0QEA",
+      databaseURL: "https://oekullus.firebaseio.com/",
+      authDomain: "oekullus.firebaseapp.com"
+    };
+        firebase.initializeApp(config);
+        /* This change listener calls the loginChanged() function 
+         * whenever a user logs in or out */
+        firebase.auth().onAuthStateChanged(loginChanged);
+        /* This function is called when the user clicks
+         * the login button. */
+        function login() {
+            // Get the values from the email and password input fields
+            var email = document.getElementById("inputEmail").value;
+            var password = document.getElementById("inputPassword").value;
+            /* Call the sign in function provided by the Firebase API 
+             * and pass the email and password */
+            firebase.auth().signInWithEmailAndPassword(email, password).catch(handleError);
+        }
+        /* This function is called when the user clicke the 
+         * logout button */
+        function logout() {
+            firebase.auth().signOut().then(function() {
+                console.log("User successfully signed out.");
+                window.location.replace("logout.html");
+            }).catch(handleError);
+        }
+        /* This is the callback function when the user changed.
+         * Either because a new user logged in, or the current user
+         * signed out. */
+        function loginChanged(user) {
+            // If the user variable is set, a user is logged in
+            if (user) {
+                // Hide the login form
+                document.getElementById("notloggedin").setAttribute("hidden", "");
+                // Show the update profile form
+                document.getElementById("updateProfileForm").removeAttribute("hidden");
+                // Show the meinProfilbutton
+                document.getElementById("myprofile").removeAttribute("hidden");
+                
+                // Populate form with profile values
+                document.getElementById("inputDisplayName").value = user.displayName;
+                document.getElementById("inputPhotoUrl").value = user.photoURL;
+                document.getElementById("inputEmail").value = user.email;
+                
+                firebase.database().ref('userprofiles/' + user.uid).once('value', function(value) {
+          document.getElementById("inputStrasse").value = value.val().strasse;
+          document.getElementById("inputLiefergebiet").value = value.val().liefergebiet;
+          document.getElementById("inputStadt").value = value.val().stadt;
+          document.getElementById("inputPLZ").value = value.val().postleitzahl;
+          document.getElementById("inputHandynummer").value = value.val().handynummer})
+                
+                
+                console.dir(user);
+                console.log("Successfully logged in!")
+            }
+            // No user logged in
+            else {
+                // Show the login form
+                document.getElementById("notloggedin").removeAttribute("hidden");
+                // Hide the update profile form
+                document.getElementById("updateProfileForm").setAttribute("hidden", "");
+                // Hide the logout button
+                document.getElementById("btnLogout").setAttribute("hidden", "true");
+                //Hide the meinProfil button
+                document.getElementById("myprofile").setAttribute("hidden", "true");
+                // Show the Anmelden/Registrieren button
+                document.getElementById("logister").removeAttribute("hidden");
+            }
+        }
+        function updateProfile() {
+            var user = firebase.auth().currentUser;
+            user.updateProfile({
+                displayName: document.getElementById("inputDisplayName").value,
+                photoURL: document.getElementById("inputPhotoUrl").value,
+            }).then(function() {
+                console.log("Profile update was successful!");
+                
+            }).catch(handleError);
+        }
+        /* This function update the profile picture
+         * and the display name on the website */
+         
+       function updateExProfile() {
+            var user = firebase.auth().currentUser;
+            
+            // Make sure we have a logged in user
+            if(user) {
+                var liefergebietRef = firebase.database().ref('userprofiles/' + user.uid + '/liefergebiet');
+                var strasseRef = firebase.database().ref('userprofiles/' + user.uid + '/strasse');
+                var plzRef = firebase.database().ref('userprofiles/' + user.uid + '/postleitzahl');
+                var stadtRef = firebase.database().ref('userprofiles/' + user.uid + '/stadt');
+                var emailRef = firebase.database().ref('userprofiles/' + user.uid + '/emailadresse');
+                var handynummerRef = firebase.database().ref('userprofiles/' + user.uid + '/handynummer');
+                
+                liefergebietRef.set(
+                  document.getElementById("inputLiefergebiet").value);
+                strasseRef.set(
+                  document.getElementById("inputStrasse").value);  
+                plzRef.set(
+                  document.getElementById("inputPLZ").value);
+                stadtRef.set(
+                  document.getElementById("inputStadt").value);
+                emailRef.set(
+                  document.getElementById("inputEmail").value);
+                handynummerRef.set(
+                  document.getElementById("inputHandynummer").value)
+                  
+                  .then(() => {
+                    console.log("Successfully updated extended user profile...");
+                    openModal()
+                });
+            }
+          }
+        
+        /* This is called if something goes wrong when logging in or logging out.
+         * For example if the user's password is wrong. */
+        function handleError(error) {
+            console.error(error.code + ": " + error.message);
+            //document.getElementById("profileupdated").setAttribute("hidden", "");
+            //document.getElementById("profileupdated1").setAttribute("hidden", "");
+            //document.getElementById("profilenotupdated1").removeAttribute("hidden");
+            //document.getElementById("profilenotupdated1").innerHTML = error.message;
+            //Anzeigen der Fehlermeldung falls permission denied
+        }
+        
+function openModal(){
+        $("#myModal").modal();
+    }
+    </script>
+
+</body>
+

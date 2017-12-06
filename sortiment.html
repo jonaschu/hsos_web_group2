@@ -5,19 +5,20 @@
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Ökullus - Ihre Ökokiste in Münster</title>
     <meta name="description" content="ökullus - die biofrische grüne Kiste">
-    <link href="css/style.css" rel="stylesheet" media="screen" type="text/css">
-     <!-- Bootstrap CSS -->
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet" media="screen" type="text/css">
-    
-    <style>
-@import url('https://fonts.googleapis.com/css?family=Neucha');
 
-</style> 
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Neucha');
+    
+    </style> <!-- Schriftart über google importieren -->
 </head>
 
 <body> <!-- der Body erscheint im Browser-->
 <div id="wrapper"> <!-- Wrapper als "Schutzumschlag"-->
+
 <header> 
     <img src="img/headerbackground.jpg" class="img-fluid" style="width: 100%">
         <a href="index.html" class="logolink"><img src=img/logo.gif alt="Logo Ökullus" title="Startseite" class="logo img-fluid"</a>
@@ -78,34 +79,40 @@
       </div>
 
 
-<main id="inhaltsbereich">
-    <h1 Style="font-family: 'Neucha', 'Open Sans', sans-serif;color: var(--color-darkgreen)">Willkommen bei Ökullus</h1>
-    
-    <h4>Ob wir auch zu Ihnen liefern entnehmen Sie bitte der Abbildung:</h4>
+<main id="inhaltsbereich"> <!-- CSS-ID zur eindeutigen Kennung -->
+<div class="container-fluid"> <!-- Größe passt sich dem Bildschirm an -->
 
-    <br>
-            <img src="img/liefergebietneu.jpg" alt="Liefergebiet Ökullus" title="Liefergebiet Ökullus" width="100%" style="border: 3px solid var(--color-darkgreen); border-radius: 8px;">
-            <br>
-            <div> <h5> </h5>     <div>
-              <br>
-            <div><h5>Kostenlose Lieferung ab 28€ Bestellwert</h5><div>
-            <div><h5>Wir freuen uns auf Sie!</h5></div>
-            <p></p>
-</main>    
+
+<div class="container-fluid">
+  <div class="row"> 
+    <div class="col-sm-3"><h2>Unsere Sortimente</h2></div>
+    <div class="col-sm-9"> </div>
+  </div> <!-- Überschrift mit für unsere Produkte -->
+</div>
+
+<div class="row" id="productList">
+   <!-- hier werden die Produkte per Script aus der firebase database geladen -->
+</div>
     
     
+</div>
+
+</main>
+
 <footer id="fussbereich">
+    <!-- Kontakt Adresse im Fußbereich mit direktem Link zur Email -->
     <address>
     E-mail: <a href="mailto:shop@oekullus.de"> shop@oekullus.de</a> &bull; J. Schulze Buschhoff &bull;
     <br> Am Handorfer Bahnhof 2 &bull; 48157 Münster
     </address>
-    
-    <a href="#wrapper">Nach Oben</a>
 
-    
-</footer> 
-</div>
+    <a href="#wrapper">Nach Oben</a> <!-- Buttom um zum Anfang der Website zu gelangen -->
+
+
+</footer>
+</div> <!-- navmain Ende -->
 </div>    <!-- wrapper Ende -->
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
@@ -155,5 +162,41 @@
             }).catch(handleError);
         }
 
-</script>
+ // Get a reference to the database's welcome text
+        var productsRef = firebase.database().ref('products');
+
+        // Änderungen werden direkt ohne refresh Sichtbar
+        productsRef.on('value', refreshProdcutList);
+
+
+        // Funktion die die Produktliste auf das setzt, was von der Database ausgelesen wird.
+        function refreshProdcutList(value) {
+            var products = value.val();
+
+            // diese var gibt an, wo im bestehenden html-doc die Produkte eingetragen werden sollen
+            var listContainer = document.querySelector("#productList");
+            listContainer.innerHTML = "";
+
+            // Loop über jedes Produkt, wobei je eine Bootstrap Card erstellt wird, in dem die Produktinformation Name, Preis, Bild, Inhalt untergebracht sind
+            products.forEach(
+                function(product) {
+                    // Create a new div element using JavaScript
+                    var newDiv = document.createElement('div');
+                    // Add the bootstrap class and our own product class
+                    newDiv.className += "col-lg-3 abstandbottom";
+                    // Add the name, description and price to the div
+                    newDiv.innerHTML = '<div class="card"><div class="card-header">' + product.name + '</div><div class="card-body"><img src="'+ product.img + '" class="img-fluid"</div><div class="card-footer"><p><strong>' + product.preis + '</strong></p><p>' + product.description + '</p><a href="#" class="btn btn-primary mybtn">Bestellen</a></div></div>';
+                    // Add the div to the parent container
+                    listContainer.appendChild(newDiv);
+                });
+
+        }
+      
+</script> <!-- script Ende -->
+
+
+
+
 </body>
+
+

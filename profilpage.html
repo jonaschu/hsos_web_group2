@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ökullus - Ihre Ökokiste in Münster</title>
+  <meta name="description" content="ökullus - die biofrische grüne Kiste">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link href="css/style.css" rel="stylesheet" media="screen" type="text/css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Neucha');
+  </style>
+  <!-- Schriftart über google importieren -->
+</head>
+
+<body>
+  <!-- der Body erscheint im Browser-->
+  <div id="wrapper">
+    <!-- Wrapper als "Schutzumschlag"-->
+
+    <header>
+      <img src="img/headerbackground.jpg" class="img-fluid" style="width: 100%">
+      <a href="index.html" class="logolink"><img src=img/logo.gif alt="Logo Ökullus" title="Startseite" class="logo img-fluid"</a>
+    </header>
+ <div id="navbereich" class="container-fluid sticky-top">
+      <nav class="navbar flex-column flex-md-row">
+        <ul class="nav flex-column flex-md-row">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Startseite</a>
+          </li>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sortiment.html">Sortiment</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">So geht's</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="sogehts.html">So bestellen Sie</a>
+              <a class="dropdown-item" href="lieferung.html">Wo liefern wir hin?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+          </li>
+        </ul>
+
+ <ul class="nav flex-column flex-md-row" id="myprofile" hidden>
+          <ul class="nav flex-column flex-md-row">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">Mein Profil</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="profilpage.html">Mein Profil</a>
+                <div class="dropdown-divider"></div>
+                <div><button id="btnlogout" class="btn btn-primary btn-block" type="submit" onclick="logout()">Abmelden</button></div>
+              </div>
+            </li>
+
+          </ul>
+        </ul>
+
+        <ul class="nav flex-column flex-md-row" id="logister" hidden>
+          <ul class="nav flex-column flex-md-row">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">Anmelden/Registrieren</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="login.html">Anmelden</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="register.html">Registrieren</a>
+              </div>
+            </li>
+
+          </ul>
+
+        </ul>
+
+      </nav>
+      </div>
+
+
+
+      <main id="inhaltsbereich">
+        
+         <div class="container">
+
+        <div class="row align-items-center" id="notloggedin" hidden>
+            <div class="col-sm-3"></div>
+            <div class="col align-self-center">
+                <h3 class="text-center">Bitte melden Sie sich zuerst an!</h3>
+                <hr>
+                
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        
+       <div id="showprofile" hidden><h1>Mein Profil</h1>
+      
+        <div class="card">
+          <div class="card-body">
+
+            <!-- These two will be filled dynamically -->
+            <h5 class="card-title" id="cardUserDisplayName">N/A</h5>
+            <img src="img/noname.jpg" class="img-fluid" style="margin-top: 16px;" id="imgProfilePhoto">
+            <div class="row">
+              <div class="col-4"><strong>Vorname:</strong></div>
+              <div class="col-8" id="displayvorname">N/A</div>
+            </div>
+            <div class="row">
+              <div class="col-4"><strong>Nachname:</strong></div>
+              <div class="col-8" id="displaynachname">N/A</div>
+            </div>
+            <div class="row">
+              <div class="col-4"><strong>Liefergebiet:</strong></div>
+              <div class="col-8" id="displayliefergebiet">N/A</div>
+            </div>
+            <div class="row">
+              <div class="col-4"><strong>Strasse:</strong></div>
+              <div class="col-8" id="displaystrasse">N/A</div>
+            </div>
+            <div class="row">
+              <div class="col-4"><strong>PLZ:</strong></div>
+              <div class="col-8" id="displayplz">N/A</div>
+            </div>
+            <div class="row">
+              <div class="col-4"><strong>Stadt:</strong></div>
+              <div class="col-8" id="displaystadt">N/A</div>
+            </div>
+            <div class="row">
+              <div class="col-4"><strong>Handynummer:</strong></div>
+              <div class="col-8" id="displayhandynummer">N/A</div>
+            </div>
+            
+
+          </div>
+        </div>
+<br>
+      <hr>
+        <h5>Kein Profilbild? Daten nicht mehr aktuell?   <br> <strong>Ändern Sie das!</strong>         <a href="profilchange.html">Profil ändern</a></h5>
+      </div>
+      </main>
+
+      <footer id="fussbereich">
+        <!-- Kontakt Adresse im Fußbereich mit direktem Link zur Email -->
+        <address>
+    E-mail: <a href="mailto:shop@oekullus.de"> shop@oekullus.de</a> &bull; J. Schulze Buschhoff &bull;
+    <br> Am Handorfer Bahnhof 2 &bull; 48157 Münster
+    </address>
+
+        <a href="#wrapper">Nach Oben</a>
+        <!-- Buttom um zum Anfang der Website zu gelangen -->
+
+
+      </footer>
+      </div>
+      <!-- navmain Ende -->
+    </div>
+    <!-- wrapper Ende -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+    <script>
+      /* global firebase*/
+      var config = {
+        apiKey: "AIzaSyBMnGNfF6KwlwLXB0VJyqMxmXfVzTw0QEA",
+        databaseURL: "https://oekullus.firebaseio.com/",
+        authDomain: "oekullus.firebaseapp.com"
+      };
+      firebase.initializeApp(config);
+      // Zugriff auf die Firebase database
+      firebase.auth().onAuthStateChanged(loginChanged);
+
+      function handleError(err) {
+        console.error(err.message);
+      }
+
+
+      function loginChanged(user) {
+        if (user) {
+          console.log("User with email >" + user.email + "< is signed in.");
+          document.getElementById("btnlogout").removeAttribute("disabled");
+          updateDisplay();
+            // Show the meinProfilbutton
+            document.getElementById("myprofile").removeAttribute("hidden");
+            //Hide the Anmelden/Registrieren button
+            document.getElementById("logister").setAttribute("hidden", "true");
+             // Show the myProfilform
+            document.getElementById("showprofile").removeAttribute("hidden");
+            //Hide the notloggedin
+            document.getElementById("notloggedin").setAttribute("hidden", "true");
+            
+            
+        }
+        else {
+          console.log("no User is Logged in");
+          document.getElementById("btnlogout").setAttribute("disabled", true);
+            document.getElementById("myprofile").setAttribute("hidden", "true");
+            // Show the Anmelden/Registrieren button
+            document.getElementById("logister").removeAttribute("hidden");
+            //Hide the myProfileform
+            document.getElementById("showprofile").setAttribute("hidden", "true");
+            // Show the notloggedin
+            document.getElementById("notloggedin").removeAttribute("hidden");
+        }
+      }
+
+      function logout() {
+        firebase.auth().signOut().then(function() {
+          console.log("User successfully signed out.");
+          window.location.replace("logout.html");
+        }).catch(handleError);
+      }
+
+      function updateDisplay() {
+        var user = firebase.auth().currentUser;
+        // Read from the profiles
+        if (user.displayName)
+          document.getElementById("cardUserDisplayName").innerText = user.displayName;
+        if (user.photoURL)
+          document.getElementById("imgProfilePhoto").setAttribute("src", user.photoURL);
+        // Read from the database
+        firebase.database().ref('userprofiles/' + user.uid).once('value', function(value) {
+          document.getElementById("displaystrasse").innerText = value.val().strasse;
+          document.getElementById("displayvorname").innerText = value.val().vorname;
+          document.getElementById("displaynachname").innerText = value.val().nachname;
+          document.getElementById("displayliefergebiet").innerText = value.val().liefergebiet;
+          document.getElementById("displaystadt").innerText = value.val().stadt;
+          document.getElementById("displayplz").innerText = value.val().postleitzahl;
+          document.getElementById("displayhandynummer").innerText = value.val().handynummer;
+          
+        })
+      }
+    </script>
+    </script>
+    <!-- script Ende -->
+
+
+
+
+</body>

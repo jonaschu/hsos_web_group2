@@ -79,17 +79,14 @@
 
 
 <main id="inhaltsbereich">
-    <h1 Style="font-family: 'Neucha', 'Open Sans', sans-serif;color: var(--color-darkgreen)">Willkommen bei Ökullus</h1>
-    
-    <h4>Ob wir auch zu Ihnen liefern entnehmen Sie bitte der Abbildung:</h4>
-
+    <h4><strong>Sie haben sich erfolgreich abgemeldet!</strong></h4>
     <br>
-            <img src="img/liefergebietneu.jpg" alt="Liefergebiet Ökullus" title="Liefergebiet Ökullus" width="100%" style="border: 3px solid var(--color-darkgreen); border-radius: 8px;">
-            <br>
-            <div> <h5> </h5>     <div>
-              <br>
-            <div><h5>Kostenlose Lieferung ab 28€ Bestellwert</h5><div>
-            <div><h5>Wir freuen uns auf Sie!</h5></div>
+    <h1 Style="font-family: 'Neucha', 'Open Sans', sans-serif;color: var(--color-darkgreen)">Auf Wiedersehen bei Ökullus</h1>
+    <br>
+    <h4>Wir freuen uns auf Ihren nächsten Besuch!</h5>
+    <br>
+    
+            <div><h5>Nutzen Sie bei Ihrem nächsten Einkauf die kostenlose Lieferung! (ab 28€ Bestellwert)</h5></div>
             <p></p>
 </main>    
     
@@ -136,7 +133,7 @@
         // Show the meinProfilbutton
         document.getElementById("myprofile").removeAttribute("hidden");
         //Hide the Anmelden/Registrieren button
-        document.getElementById("logister").setAttribute("hidden", "true");
+        document.getElementById("logister").setAttribute("hidden", "true");        
       }
       else {
         console.log("no User is Logged in");
@@ -151,7 +148,6 @@
     function logout() {
             firebase.auth().signOut().then(function() {
                 console.log("User successfully signed out.");
-                window.location.replace("logout.html");
             }).catch(handleError);
         }
 

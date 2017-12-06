@@ -23,15 +23,18 @@ body {
 /* Gestalte header */
 .logo {
     border-radius: 0 0 8px 8px;
-    position: absolute;
-    left: 10px;
-    width: 20%;
-    min-width:130px;
-    max-width: 270px;
-    z-index: 1;
     padding: 1%;
     padding-top:0.5%;
     background-color: white;
+}
+
+.logolink {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    width: 20%;
+    min-width:130px;
+    max-width: 270px;
 }
 
 #navbereich {
@@ -46,8 +49,16 @@ body {
     color: var(--color-black);
     font-size: 90%
 }
+
+
 /* Gestalte main */
 
+#namensanzeige {
+    font-family: 'Neucha', 'Open Sans', sans-serif;
+    font-size: 400%;
+    padding-top: 20px;
+    padding-bottom: 50px
+}
 
 #textbereich {
     font-family: 'Neucha', 'Open Sans', sans-serif;
@@ -99,7 +110,7 @@ a:focus {
 }
 
 
-/* Wiedrherstellung der Abstände wegen Reset */
+/* Wiederherstellung der Abstände wegen Reset */
 h2, p, ul, ol, blockquote { margin-bottom: 1em; }
 
 /* Abstand von Links */
@@ -118,7 +129,29 @@ h2 { font-size: 200%;
     font-family: 'Neucha', 'Open Sans', sans-serif;
     color: var(--color-darkgreen);
 }
-.test {
+.abstandbottom {
     padding-bottom: 25px;
 
 }
+.btn {
+    background-color: var(--color-freshgreen);
+    border-color: var(--color-freshgreen);
+}
+
+.btn:hover {
+    background-color: green ;
+    border-color: var(--color-freshgreen);
+}
+
+.btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.btn:disabled {
+    background-color: var(--color-freshgreen);
+    border-color: var(--color-freshgreen);
+    transform: none;
+}
+
