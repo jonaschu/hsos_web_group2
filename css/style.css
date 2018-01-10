@@ -1,30 +1,37 @@
-
 /* Farben als Variablen definieren */
+
 :root {
     --color-freshgreen: #79b41e;
     --color-darkgreen: #005641;
     --color-black: #0D0A0B;
-    --color-backgroundgreen: #DBE4C0
+    --color-backgroundgreen: #DBE4C0;
+    --color-red: #8c2f39;
 }
 
 /* Gestalte body */
+
 body {
-    background-color: white; /* Hintergrundfarbe */
-    color: black; /* Schriftfarbe */
+    background-color: white;
+    /* Hintergrundfarbe */
+    color: black;
+    /* Schriftfarbe */
     font-family: 'Open Sans', sans-serif;
-    margn-top: -40px /* weißen Balken über dem Header verschwinden lassen */
+    margn-top: -40px/* weißen Balken über dem Header verschwinden lassen */
 }
 
 /* Gestalte wrapper */
-#wrapper{
-    background-color: var(--color-backgroundgreen);/* Hintergrundfarbe definieren */
-    
+
+#wrapper {
+    background-color: var(--color-backgroundgreen);
+    /* Hintergrundfarbe definieren */
 }
+
 /* Gestalte header */
+
 .logo {
     border-radius: 0 0 8px 8px;
     padding: 1%;
-    padding-top:0.5%;
+    padding-top: 0.5%;
     background-color: white;
 }
 
@@ -33,21 +40,31 @@ body {
     left: 10px;
     top: 0px;
     width: 20%;
-    min-width:130px;
+    min-width: 130px;
     max-width: 270px;
 }
 
 #navbereich {
     font-family: 'Neucha', 'Open Sans', sans-serif;
     font-size: 150%;
-    background-color:white;
+    background-color: white;
+    padding-top: 0px
 }
-#navbereich a:hover, #navbereich a:focus {
+
+#navbereich a:hover,
+#navbereich a:focus {
     color: var(--color-freshgreen);
 }
-#navbereich a, #navbereich div {
+
+#navbereich a,
+#navbereich div {
     color: var(--color-black);
     font-size: 90%
+}
+
+#navibutton {
+    width: 30px;
+    height: 90%;
 }
 
 
@@ -65,8 +82,8 @@ body {
     font-size: 150%;
     padding-top: 20px;
     padding-bottom: 50px
-    
 }
+
 #inhaltsbereich {
     margin: 10px;
     padding-top: 30px;
@@ -74,36 +91,50 @@ body {
 }
 
 /* Gestalte footer */
+
 #fussbereich {
     padding-top: 10px;
     border-top: 1px solid black;
     padding-bottom: 50px
 }
-#inhaltsbereich, #fussbereich {
+
+#inhaltsbereich,
+#fussbereich {
     margin: auto;
     width: 90%;
-} /* Inhalt und fussbereich ein bisschen weniger Breit als der Rest und zentriert */
+}
+
+/* Inhalt und fussbereich ein bisschen weniger Breit als der Rest und zentriert */
 
 /* Gestalten der Kontakt Adresse */
+
 address {
-    text-align: center; /* zentrieren */
-    font-size: 85%; /* kleiner als der Rest */
-    font-family: normal; /* nicht kursiv */
-    letter-spacing: 1.5px; /* abstand zwischen Buchstaben */
-    line-height: 1.5 /* Zeilenabstand */
+    text-align: center;
+    /* zentrieren */
+    font-size: 85%;
+    /* kleiner als der Rest */
+    font-family: normal;
+    /* nicht kursiv */
+    letter-spacing: 1.5px;
+    /* abstand zwischen Buchstaben */
+    line-height: 1.5/* Zeilenabstand */
 }
 
 /* Links nicht unterstreichen */
+
 a {
     text-decoration: none;
-} 
+}
 
 /* Links in main und Address doch unterstreichen */
+
 main a,
 address a {
     text-decoration: underline
 }
+
 /* Links sind nicht mehr , wenn der Mauszeiger sich auf den Punkten befindet oder diese mit TAB ausgewählt wurden */
+
 a:hover,
 a:focus {
     text-decoration: none
@@ -111,42 +142,69 @@ a:focus {
 
 
 /* Wiederherstellung der Abstände wegen Reset */
-h2, p, ul, ol, blockquote { margin-bottom: 1em; }
+
+h2,
+p,
+ul,
+ol,
+blockquote {
+    margin-bottom: 1em;
+}
 
 /* Abstand von Links */
-ul, ol { margin-left: 2em; }
+
+ul,
+ol {
+    margin-left: 2em;
+}
+
 /* verschachtelte Listen ohne Abstand */
-ul ul, ul ol, ol ol, ol ul { margin-bottom: 0; }
-h1 { font-size: 250%;
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 250%;
     margin-top: 0.5em;
-    margin-left:0;
+    margin-left: 0;
     font-family: 'Neucha', 'Open Sans', sans-serif;
     color: var(--color-darkgreen);
 }
 
-h2 { font-size: 200%;
+h2 {
+    font-size: 200%;
     margin-bottom: 0.5em;
     font-family: 'Neucha', 'Open Sans', sans-serif;
     color: var(--color-darkgreen);
 }
+
 .abstandbottom {
     padding-bottom: 25px;
 
 }
+
 .btn {
     background-color: var(--color-freshgreen);
     border-color: var(--color-freshgreen);
 }
 
 .btn:hover {
-    background-color: green ;
+    background-color: green;
     border-color: var(--color-freshgreen);
 }
 
 .btn:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.btnmargin {
+    margin-bottom: 15px
 }
 
 .btn:disabled {
@@ -155,3 +213,27 @@ h2 { font-size: 200%;
     transform: none;
 }
 
+.product {
+    margin: 32px;
+}
+
+.card {
+    width: 100%;
+}
+
+.rate {
+    color: gray;
+}
+
+.rate .down {
+    color: var(--color-red);
+}
+
+.rate .up {
+    color: var(--color-darkgreen);
+}
+
+.rate svg {
+    margin: 8px;
+
+}

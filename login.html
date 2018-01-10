@@ -26,7 +26,15 @@
       <a href="index.html" class="logolink"><img src=img/logo.gif alt="Logo Ökullus" title="Startseite" class="logo img-fluid"</a>
     </header>
  <div id="navbereich" class="container-fluid sticky-top">
-      <nav class="navbar flex-column flex-md-row">
+  <nav class="navbar navbar-expand-md flex-md-row navbar-light">
+        
+ <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+ 
+ 
         <ul class="nav flex-column flex-md-row">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Startseite</a>
@@ -42,6 +50,7 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href="sogehts.html">So bestellen Sie</a>
               <a class="dropdown-item" href="lieferung.html">Wo liefern wir hin?</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="kontakt.html">Kontakt</a>
@@ -49,7 +58,7 @@
         </ul>
 
         <ul class="nav flex-column flex-md-row" id="myprofile" hidden>
-          <ul class="nav flex-column flex-md-row">
+          
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">Mein Profil</a>
               <div class="dropdown-menu">
@@ -58,12 +67,9 @@
                 <div><button id="btnlogout" class="btn btn-primary btn-block" type="submit" onclick="logout()">Abmelden</button></div>
               </div>
             </li>
-
-          </ul>
-        </ul>
+       </ul>
 
         <ul class="nav flex-column flex-md-row" id="logister" hidden>
-          <ul class="nav flex-column flex-md-row">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">Anmelden/Registrieren</a>
               <div class="dropdown-menu">
@@ -73,13 +79,10 @@
               </div>
             </li>
 
-          </ul>
-
         </ul>
-
+    </div>
       </nav>
       </div>
-
 
       <main id="inhaltsbereich">
         <!-- CSS-ID zur eindeutigen Kennung -->
@@ -105,6 +108,10 @@
           <div style="color: red" id="err" hidden="">Fehlermeldung</div>
               </div>
               <button class="btn btn-lg btn-primary btn-block" onclick="login()">Anmelden</button>
+              
+            <!-- When this is clicked, loginSocial() is called -->
+            <button id="btnLogin" onclick="loginSocial()" class="btn btn-lg btn-primary btn-block">Sign in with Google</button>
+
 
             </div>
             <div class="col-md-4"> </div>
@@ -186,6 +193,30 @@
 
       console.log("Login wurde aufgerufen");
     }
+
+
+        function loginSocial() {
+            var provider = new firebase.auth.GoogleAuthProvider();
+            
+            firebase.auth().signInWithPopup(provider).then(function(result) {
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                var token = result.credential.accessToken;
+                // The signed-in user info.
+                var user = result.user;
+                // ...
+            }).catch(function(error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                // The email of the user's account used.
+                var email = error.email;
+                // The firebase.auth.AuthCredential type that was used.
+                var credential = error.credential;
+                // ...
+            });
+        }
+
+
 
     function handleError(err) {
       console.error(err.message);

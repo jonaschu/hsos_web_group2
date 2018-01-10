@@ -26,7 +26,15 @@
       <a href="index.html" class="logolink"><img src=img/logo.gif alt="Logo Ökullus" title="Startseite" class="logo img-fluid"</a>
     </header>
  <div id="navbereich" class="container-fluid sticky-top">
-      <nav class="navbar flex-column flex-md-row">
+  <nav class="navbar navbar-expand-md flex-md-row navbar-light">
+        
+ <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+ 
+ 
         <ul class="nav flex-column flex-md-row">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Startseite</a>
@@ -42,6 +50,7 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href="sogehts.html">So bestellen Sie</a>
               <a class="dropdown-item" href="lieferung.html">Wo liefern wir hin?</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="kontakt.html">Kontakt</a>
@@ -49,7 +58,7 @@
         </ul>
 
         <ul class="nav flex-column flex-md-row" id="myprofile" hidden>
-          <ul class="nav flex-column flex-md-row">
+          
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">Mein Profil</a>
               <div class="dropdown-menu">
@@ -58,12 +67,9 @@
                 <div><button id="btnlogout" class="btn btn-primary btn-block" type="submit" onclick="logout()">Abmelden</button></div>
               </div>
             </li>
-
-          </ul>
-        </ul>
+       </ul>
 
         <ul class="nav flex-column flex-md-row" id="logister" hidden>
-          <ul class="nav flex-column flex-md-row">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="sogehts">Anmelden/Registrieren</a>
               <div class="dropdown-menu">
@@ -73,10 +79,8 @@
               </div>
             </li>
 
-          </ul>
-
         </ul>
-
+    </div>
       </nav>
       </div>
 
